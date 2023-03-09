@@ -3,9 +3,14 @@ const searchInputEl = document.getElementById("search-input");
 const resultURL = "result.html";
 
 // CALL fetchTeam() FUNCTION ON CLICK
-function onDOMContentLoaded() {
-    searchButtonEl.addEventListener("click", () => {
-        fetchTeam(searchInputEl.value.trim());
+async function onDOMContentLoaded() {
+    searchButtonEl.addEventListener("click", async () => {
+        const success = await fetchTeam(searchInputEl.value.trim());
+        if (success) {
+            setTimeout(() => { 
+                location.href = resultURL;
+            }, 1000);
+        }
     });
 }
 
