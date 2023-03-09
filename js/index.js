@@ -16,7 +16,7 @@ function transitionToPage(href) {
     document.querySelector('body').style.opacity = 0;
     setTimeout(() => { 
         window.location.href = href;
-    }, 3000);
+    }, 500);
 }
 
 function onDOMContentLoaded2() {
@@ -33,8 +33,7 @@ function fetchTeam(searchQuery) {
         if (team) {
             const myObjectString = JSON.stringify(team);
             localStorage.setItem('team', myObjectString);
-            
-            setTimeout(() => location.href = resultURL, 3000);
+            setTimeout(() => location.href = resultURL, 500);
             
         } else {
             alert(`Team ${searchQuery} not found.`);
