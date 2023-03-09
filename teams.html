@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&family=Shantell+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b5fe5a02b7.js" crossorigin="anonymous"></script>
+    <title>Teams</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- <audio autoplay id="audio" loop="true">
+        <source src="stadium.mp3">
+      </audio> -->
+    <header>
+        <nav>
+            <ul id="nav">
+                <div onclick="transitionToPage('index.html')">Home</div>
+                <div>List of Teams</div>
+                <div onclick="transitionToPage('predictor.html')">Bracket Predictor</div>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
+            </ul>  
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </header>
+
+    <main>
+        <div class="teams-container">
+            <h1>Teams</h1>
+            <ul class="teams-grid">
+
+            </ul>
+        </div>
+    </main>
+    <script src="js/index.js"></script>
+    <script>
+        // RESPONSIVE SIDE MENU
+        let nav = document.getElementById("nav");
+        function openmenu(){
+            nav.style.right = "0";
+        }
+        function closemenu(){
+            nav.style.right = "-100%";
+        }
+    </script>
+</body>
+</html>

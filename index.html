@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&family=Shantell+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b5fe5a02b7.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <audio autoplay id="audio" loop="true">
+        <source src="audio/stadium.mp3">
+      </audio>
+    <header>
+        <nav>
+            <ul id="nav">
+                <div>Home</div>
+                <div onclick="transitionToPage('teams.html')">List of Teams</div>
+                <div onclick="transitionToPage('predictor.html')">Bracket Predictor</div>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
+            </ul>  
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <img id="logo" src="images/2022_FIFA_World_Cup.png" alt="">
+            
+            <!-- <datalist id="countries">
+                <option>Argentina</option>
+                <option>Germany</option>
+            </datalist> -->
+            
+            <div class="search-box">
+                <input id="search-input" type="search" placeholder="Search a team">
+                <button onclick="transitionToPage('index.html')" id="searchButton"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.getElementById("audio").volume = 0.1;
+        // RESPONSIVE SIDE MENU
+        let nav = document.getElementById("nav");
+        function openmenu(){
+            nav.style.right = "0";
+        }
+        function closemenu(){
+            nav.style.right = "-100%";
+        }
+    </script>
+    <!-- <script src="utility.js"></script> -->
+    <script src="js/index.js"></script>
+</body>
+</html>

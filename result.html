@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&family=Shantell+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b5fe5a02b7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Result</title>
+</head>
+<body>
+    <!-- <audio autoplay id="audio" loop="true">
+        <source src="stadium.mp3">
+      </audio> -->
+    <header>
+        <nav>
+            <ul id="nav">
+                <div onclick="transitionToPage('index.html')">Home</div>
+                <div onclick="transitionToPage('teams.html')">List of Teams</div>
+                <div onclick="transitionToPage('Predictor.html')">Bracket Predictor</div>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
+            </ul>  
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </header>
+    <main>
+        <div class="result-container">
+            <h1 id="country">Country</h1>
+            <img src="" alt="">
+            <h2 id="rank">World Ranking: 51</h2>
+            <div id="table">
+                <div class="team-stat">
+                    <p>Date Qualified:</p>
+                    <div id="dateQualified">
+                        Sample Text1
+                    </div>
+                </div>
+                <div class="team-stat">
+                    <p>Qualification Method:</p>
+                    <div id="qualificationMethod">
+                        Sample Text2
+                    </div>
+                </div>
+                <div class="team-stat">
+                    <p>Last Qualification:</p>
+                    <div id="lastQualification">
+                        Sample Text3
+                    </div>
+                </div>
+                <div class="team-stat">
+                    <p>Previous Titles:</p>
+                    <div id="previousTitles">
+                        Sample Text4
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // RESPONSIVE SIDE MENU
+        let nav = document.getElementById("nav");
+        function openmenu(){
+            nav.style.right = "0";
+        }
+        function closemenu(){
+            nav.style.right = "-100%";
+        }
+    </script>
+    <script src="js/index.js"></script>
+</body>
+</html>

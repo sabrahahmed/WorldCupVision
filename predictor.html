@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&family=Shantell+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b5fe5a02b7.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Predictor</title>
+</head>
+<body onload="autoClick();">
+    <audio autoplay id="audio" loop="true">
+        <source src="audio/stadium.mp3">
+      </audio>
+    <header>
+        <nav>
+          <ul id="nav">
+                <div onclick="transitionToPage('index.html')">Home</div>
+                <div onclick="transitionToPage('teams.html')">List of Teams</div>
+                <div onclick="transitionToPage('#')">Bracket Predictor</div>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
+            </ul>  
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </header>
+
+    <main id="bracket-main">
+        <div class="teams-container">
+          <h1>Predict the winner!</h1>
+            <div id="bracket">
+              <!-- <h2>My World Cup Prediction!</h2> -->
+              <div class="col round-16">
+                <h3>Round of 16</h3>
+                <div class="pair">
+                  <div class="team">
+                    <img src="Images/Flags/Netherlands.jpg" alt="">
+                    <p class="R16 teamSelect">Netherlands</p>
+                  </div>
+                  <div class="team">
+                    <img src="Images/Flags/United States.jpg" alt="">
+                    <p class="R16 teamSelect">United States</p>
+                  </div>
+                </div>
+                <div class="pair">
+                  <div class="team">
+                    <img src="Images/Flags/Argentina.jpg" alt="">
+                    <p class="R16 teamSelect">Argentina</p>
+                  </div>
+                  <div class="team">
+                    <img src="Images/Flags/Australia.jpg" alt="">
+                    <p class="R16 teamSelect">Australia</p>
+                  </div>
+                </div>
+                <div class="pair">
+                  <div class="team">
+                    <img src="Images/Flags/Japan.jpg" alt="">
+                    <p class="R16 teamSelect">Japan</p>
+                  </div>
+                  <div class="team">
+                    <img src="Images/Flags/Croatia.jpg" alt="">
+                    <p class="R16 teamSelect">Croatia</p>
+                  </div>
+                </div>
+                <div class="pair">
+                  <div class="team">
+                    <img src="Images/Flags/Brazil.jpg" alt="">
+                    <p class="R16 teamSelect">Brazil</p>
+                  </div>
+                  <div class="team">
+                    <img src="Images/Flags/South Korea.jpg" alt="">
+                    <p class="R16 teamSelect">South Korea</p>
+                  </div>
+                </div>
+                <div class="pair">
+                  <div class="team">
+                    <img src="Images/Flags/France.jpg" alt="">
+                    <p class="R16 teamSelect">France</p>
+                  </div>
+                  <div class="team">
+                    <img src="Images/Flags/Poland.jpg" alt="">
+                    <p class="R16 teamSelect">Poland</p>
+                  </div>
+                </div>
+                <div class="pair">
+                  <div class="team">
+                    <img src="Images/Flags/England.jpg" alt="">
+                    <p class="R16 teamSelect">England</p>
+                  </div>
+                  <div class="team">
+                    <img src="Images/Flags/Senegal.jpg" alt="">
+                    <p class="R16 teamSelect">Senegal</p>
+                  </div>
+                </div>
+                <div class="pair">
+                  <div class="team">
+                    <img src="Images/Flags/Morocco.jpg" alt="">
+                    <p class="R16 teamSelect">Morocco</p>
+                  </div>
+                  <div class="team">
+                    <img src="Images/Flags/Spain.jpg" alt="">
+                    <p class="R16 teamSelect">Spain</p>
+                  </div>
+                </div>
+                <div class="pair">
+                  <div class="team">
+                    <img src="Images/Flags/Portugal.jpg" alt="">
+                    <p class="R16 teamSelect">Portugal</p>
+                  </div>
+                  <div class="team">
+                    <img src="Images/Flags/Switzerland.jpg" alt="">
+                    <p class="R16 teamSelect">Switzerland</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col quarters">
+                <h3>Quarter Finals</h3>
+                <div class="pair">
+                  <div class="team">
+                    <img src="" alt="" >
+                    <select class="teamSelect">
+                      <option value=""></option>
+                      <option value="Netherlands">Netherlands</option>
+                      <option value="United States">United States</option>
+                    </select>
+                  </div>
+                  <div class="team">
+                    <img src="" alt="">
+                    <select class="teamSelect">
+                      <option value=""></option>
+                      <option value="Argentina">Argentina</option>
+                      <option value="Australia">Australia</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="pair">
+                  <div class="team">
+                    <img src="" alt="">
+                    <select class="teamSelect">
+                      <option value=""></option>
+                      <option value="Japan">Japan</option>
+                      <option value="Croatia">Croatia</option>
+                    </select>
+                  </div>
+                  <div class="team">
+                    <img src="" alt="">
+                    <select class="teamSelect">
+                      <option value=""></option>
+                      <option value="Brazil">Brazil</option>
+                      <option value="South Korea">South Korea</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="pair">
+                  <div class="team">
+                    <img src="" alt="">
+                    <select class="teamSelect">
+                      <option value=""></option>
+                      <option value="France">France</option>
+                      <option value="Poland">Poland</option>
+                    </select>
+                  </div>
+                  <div class="team">
+                    <img src="" alt="">
+                    <select class="teamSelect">
+                      <option value=""></option>
+                      <option value="England">England</option>
+                      <option value="Senegal">Senegal</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="pair">
+                  <div class="team">
+                    <img src="" alt="">
+                    <select class="teamSelect">
+                      <option value=""></option>
+                      <option value="Morocco">Morocco</option>
+                      <option value="Spain">Spain</option>
+                    </select>
+                  </div>
+                  <div class="team">
+                    <img src="" alt="">
+                    <select class="teamSelect">
+                      <option value=""></option>
+                      <option value="Portugal">Portugal</option>
+                      <option value="Switzerland">Switzerland</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col semis">
+                <h3>Semi Finals</h3>
+                <div class="pair">
+                  <div class="team">
+                    <img src="" alt="">
+                    <select class="teamSelect">
+                      <option value=""></option>
+                      <option value="Netherlands">Netherlands</option>
+                      <option value="United States">United States</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Argentina">Argentina</option>
+                    </select>
+                  </div>
+                  <div class="team">
+                    <img src="" alt="">
+                    <select class="teamSelect">
+                      <option value=""></option>
+                      <option value="Japan">Japan</option>
+                      <option value="Croatia">Croatia</option>
+                      <option value="Brazil">Brazil</option>
+                      <option value="South Korea">South Korea</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="pair">
+                  <div class="team">
+                    <img src="" alt="">
+                    <select class="teamSelect">
+                      <option value=""></option>
+                      <option value="France">France</option>
+                      <option value="Poland">Poland</option>
+                      <option value="England">England</option>
+                      <option value="Senegal">Senegal</option>
+                    </select>
+                  </div>
+                  <div class="team">
+                    <img src="" alt="">
+                    <select class="teamSelect">
+                      <option value=""></option>
+                      <option value="Morocco">Morocco</option>
+                      <option value="Spain">Spain</option>
+                      <option value="Portugal">Portugal</option>
+                      <option value="Switzerland">Switzerland</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col finals">
+                <h3>Finals</h3>
+                <div class="pair">
+                  <div class="team">
+                    <img src="" alt="">
+                    <select class="teamSelect">
+                      <option value=""></option>
+                      <option value="Netherlands">Netherlands</option>
+                      <option value="United States">United States</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Argentina">Argentina</option>
+                      <option value="Japan">Japan</option>
+                      <option value="Croatia">Croatia</option>
+                      <option value="Brazil">Brazil</option>
+                      <option value="South Korea">South Korea</option>
+                    </select>
+                  </div>
+                  <div class="team">
+                    <img src="" alt="">
+                    <select class="teamSelect">
+                      <option value=""></option>
+                      <option value="France">France</option>
+                      <option value="Poland">Poland</option>
+                      <option value="England">England</option>
+                      <option value="Senegal">Senegal</option>
+                      <option value="Morocco">Morocco</option>
+                      <option value="Spain">Spain</option>
+                      <option value="Portugal">Portugal</option>
+                      <option value="Switzerland">Switzerland</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col champion">
+                <h3>Champion</h3>
+                <div class="pair">
+                  <div>
+                    <img id="trophy" src="Images/trophy.png" alt="">
+                  </div>
+                  <div class="team">
+                    <img src="" alt="">
+                    <select class="teamSelect">
+                      <option value=""></option>
+                      <option value="Netherlands">Netherlands</option>
+                      <option value="United States">United States</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Argentina">Argentina</option>
+                      <option value="Japan">Japan</option>
+                      <option value="Croatia">Croatia</option>images
+                      <option value="Brazil">Brazil</option>
+                      <option value="South Korea">South Korea</option>
+                      <option value="France">France</option>
+                      <option value="Poland">Poland</option>
+                      <option value="England">England</option>
+                      <option value="Senegal">Senegal</option>
+                      <option value="Morocco">Morocco</option>
+                      <option value="Spain">Spain</option>
+                      <option value="Portugal">Portugal</option>
+                      <option value="Switzerland">Switzerland</option>
+                  </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a  target="_blank" id="save" class="export-btn">
+              Save Bracket <i class="fa-solid fa-download"></i></a>  
+    </main>
+    <script>
+      document.getElementById("audio").volume = 0.1;
+    </script>
+    <script src="js/index.js"></script>
+    <script src="js/predictor.js"></script>
+</body>
+</html>

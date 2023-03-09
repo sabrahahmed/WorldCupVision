@@ -1,0 +1,258 @@
+[
+    {
+      "team": "Qatar",
+      "ranking": "51",
+      "dateQualified": "Dec. 2, 2010",
+      "qualificationMethod": "Hosts",
+      "lastQualification": "This is Qatar's first world cup!",
+      "previousTitles": "Qatar has no previous titles!"
+    },
+    {
+      "team": "Germany",
+      "ranking": "12",
+      "dateQualified": "Oct. 11, 2021",
+      "qualificationMethod": "UEFA Group J winners",
+      "lastQualification": "2018",
+      "previousTitles": "Winners (1954, 1974, 1990, 2014)"
+    },
+    {
+      "team": "Denmark",
+      "ranking": "11",
+      "dateQualified": "Oct. 12, 2021",
+      "qualificationMethod": "UEFA Group F winners",
+      "lastQualification": "2018",
+      "previousTitles": "Quarter-finals (1998)"
+    },
+    {
+      "team": "Brazil",
+      "ranking": "1",
+      "dateQualified": "Nov. 11, 2021",
+      "qualificationMethod": "CONMEBOL winners\t",
+      "lastQualification": "2018",
+      "previousTitles": "Winners (1958, 1962, 1970, 1994, 2002)"
+    },
+    {
+      "team": "France",
+      "ranking": "3",
+      "dateQualified": "Nov. 13, 2021",
+      "qualificationMethod": "UEFA Group D winners",
+      "lastQualification": "2018",
+      "previousTitles": "Winners (1998, 2018)"
+    },
+    {
+      "team": "Belgium",
+      "ranking": "2",
+      "dateQualified": "Nov. 13, 2021",
+      "qualificationMethod": "UEFA Group E winners",
+      "lastQualification": "2018",
+      "previousTitles": "Third place (2018)"
+    },
+    {
+      "team": "Croatia",
+      "ranking": "16",
+      "dateQualified": "Nov. 14, 2021",
+      "qualificationMethod": "UEFA Group H winners",
+      "lastQualification": "2018",
+      "previousTitles": "Runners-up (2018)"
+    },
+    {
+      "team": "Spain",
+      "ranking": "7",
+      "dateQualified": "Nov. 14, 2021",
+      "qualificationMethod": "UEFA Group B winners",
+      "lastQualification": "2018",
+      "previousTitles": "Winners (2010)"
+    },
+    {
+      "team": "Serbia",
+      "ranking": "25",
+      "dateQualified": "Nov. 14, 2021",
+      "qualificationMethod": "UEFA Group A winners",
+      "lastQualification": "2018",
+      "previousTitles": "Fourth place (1930, 1962)"
+    },
+    {
+      "team": "England",
+      "ranking": "5",
+      "dateQualified": "Nov. 15, 2021",
+      "qualificationMethod": "UEFA Group I winners",
+      "lastQualification": "2018",
+      "previousTitles": "Winners (1966)"
+    },
+    {
+      "team": "Switzerland",
+      "ranking": "14",
+      "dateQualified": "Nov. 15, 2021",
+      "qualificationMethod": "UEFA Group C winners",
+      "lastQualification": "2018",
+      "previousTitles": "Quarter-finals (1934, 1938, 1954)"
+    },
+    {
+      "team": "Netherlands",
+      "ranking": "10",
+      "dateQualified": "Nov. 16, 2021",
+      "qualificationMethod": "UEFA Group G winners",
+      "lastQualification": "2014",
+      "previousTitles": "Runners-up (1974, 1978, 2010)"
+    },
+    {
+      "team": "Argentina",
+      "ranking": "4",
+      "dateQualified": "Nov. 16, 2021",
+      "qualificationMethod": "CONMEBOL runners-up",
+      "lastQualification": "2018",
+      "previousTitles": "Winners (1978, 1986)"
+    },
+    {
+      "team": "Iran",
+      "ranking": "21",
+      "dateQualified": "Jan. 27, 2022",
+      "qualificationMethod": "AFC third round Group A winners",
+      "lastQualification": "2018",
+      "previousTitles": "Group stage (1978, 1998, 2006, 2014, 2018)"
+    },
+    {
+      "team": "South Korea",
+      "ranking": "29",
+      "dateQualified": "Feb. 1, 2022",
+      "qualificationMethod": "AFC third round Group A runners-up",
+      "lastQualification": "2018",
+      "previousTitles": "Fourth place (2002)"
+    },
+    {
+      "team": "Japan",
+      "ranking": "23",
+      "dateQualified": "Mar. 24, 2022",
+      "qualificationMethod": "AFC third round Group B runners-up",
+      "lastQualification": "2018",
+      "previousTitles": "Round of 16 (2002, 2010, 2018)"
+    },
+    {
+      "team": "Saudi Arabia",
+      "ranking": "49",
+      "dateQualified": "Mar. 24, 2022",
+      "qualificationMethod": "AFC third round Group B winners",
+      "lastQualification": "2018",
+      "previousTitles": "Round of 16 (1994)"
+    },
+    {
+      "team": "Ecuador",
+      "ranking": "46",
+      "dateQualified": "Mar. 24, 2022",
+      "qualificationMethod": "CONMEBOL fourth place",
+      "lastQualification": "2014",
+      "previousTitles": "Round of 16 (2006)"
+    },
+    {
+      "team": "Uruguay",
+      "ranking": "13",
+      "dateQualified": "Mar. 24, 2022",
+      "qualificationMethod": "CONMEBOL third place",
+      "lastQualification": "2018",
+      "previousTitles": "Winners (1930, 1950)"
+    },
+    {
+      "team": "Canada",
+      "ranking": "38",
+      "dateQualified": "Mar. 27, 2022",
+      "qualificationMethod": "CONCACAF third round winners",
+      "lastQualification": "1986",
+      "previousTitles": "Group stage (1986)"
+    },
+    {
+      "team": "Ghana",
+      "ranking": "60",
+      "dateQualified": "Mar. 29, 2022",
+      "qualificationMethod": "CAF third round winners",
+      "lastQualification": "2014",
+      "previousTitles": "Quarter-finals (2010)"
+    },
+    {
+      "team": "Senegal",
+      "ranking": "20",
+      "dateQualified": "Mar. 29, 2022",
+      "qualificationMethod": "CAF third round winners",
+      "lastQualification": "2018",
+      "previousTitles": "Quarter-finals (2002)"
+    },
+    {
+      "team": "Portugal",
+      "ranking": "8",
+      "dateQualified": "Mar. 29, 2022",
+      "qualificationMethod": "UEFA play-offs Path C winners",
+      "lastQualification": "2018",
+      "previousTitles": "Third place (1966)"
+    },
+    {
+      "team": "Poland",
+      "ranking": "26",
+      "dateQualified": "Mar. 29, 2022",
+      "qualificationMethod": "UEFA play-offs Path B winners",
+      "lastQualification": "2018",
+      "previousTitles": "Third place (1974, 1982)"
+    },
+    {
+      "team": "Tunisia",
+      "ranking": "35",
+      "dateQualified": "Mar. 29, 2022",
+      "qualificationMethod": "CAF third round winners",
+      "lastQualification": "2018",
+      "previousTitles": "Group stage (1978, 1998, 2002, 2006, 2018)"
+    },
+    {
+      "team": "Morocco",
+      "ranking": "24",
+      "dateQualified": "Mar. 29, 2022",
+      "qualificationMethod": "CAF third round winners",
+      "lastQualification": "2018",
+      "previousTitles": "Round of 16 (1986)"
+    },
+    {
+      "team": "Cameroon",
+      "ranking": "37",
+      "dateQualified": "Mar. 29, 2022",
+      "qualificationMethod": "CAF third round winners",
+      "lastQualification": "2014",
+      "previousTitles": "Quarter-finals (1990)"
+    },
+    {
+      "team": "United States",
+      "ranking": "15",
+      "dateQualified": "Mar. 30, 2022",
+      "qualificationMethod": "CONCACAF third round third place",
+      "lastQualification": "2014",
+      "previousTitles": "Third place (1930)"
+    },
+    {
+      "team": "Mexico",
+      "ranking": "9",
+      "dateQualified": "Mar. 30, 2022",
+      "qualificationMethod": "CONCACAF third round runners-up",
+      "lastQualification": "2018",
+      "previousTitles": "Quarter-finals (1970, 1986)"
+    },
+    {
+      "team": "Wales",
+      "ranking": "18",
+      "dateQualified": "June 5, 2022",
+      "qualificationMethod": "UEFA play-offs Path A winners",
+      "lastQualification": "1958",
+      "previousTitles": "Quarter-finals (1958)"
+    },
+    {
+      "team": "Australia",
+      "ranking": "42",
+      "dateQualified": "June 13, 2022",
+      "qualificationMethod": "AFC v CONMEBOL play-off winners",
+      "lastQualification": "2018",
+      "previousTitles": "Round of 16 (2006)"
+    },
+    {
+      "team": "Costa Rica",
+      "ranking": "31",
+      "dateQualified": "June 14, 2022",
+      "qualificationMethod": "CONCACAF v OFC play-off winners",
+      "lastQualification": "2018",
+      "previousTitles": "Quarter-finals (2014)"
+    }
+  ]
