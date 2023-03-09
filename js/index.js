@@ -3,14 +3,9 @@ const searchInputEl = document.getElementById("search-input");
 const resultURL = "result.html";
 
 // CALL fetchTeam() FUNCTION ON CLICK
-async function onDOMContentLoaded() {
-    searchButtonEl.addEventListener("click", async () => {
-        const success = await fetchTeam(searchInputEl.value.trim());
-        if (success) {
-            setTimeout(() => { 
-                location.href = resultURL;
-            }, 1000);
-        }
+function onDOMContentLoaded() {
+    searchButtonEl.addEventListener("click", () => {
+        fetchTeam(searchInputEl.value.trim());
     });
 }
 
@@ -21,7 +16,7 @@ function transitionToPage(href) {
     document.querySelector('body').style.opacity = 0;
     setTimeout(() => { 
         window.location.href = href;
-    }, 500);
+    }, 3000);
 }
 
 function onDOMContentLoaded2() {
