@@ -39,7 +39,7 @@ function fetchTeam(searchQuery) {
             const myObjectString = JSON.stringify(team);
             localStorage.setItem('team', myObjectString);
             
-            setTimeout(() => location.href = resultURL, 500);
+            setTimeout(() => location.href = resultURL, 3000);
             
         } else {
             alert(`Team ${searchQuery} not found.`);
