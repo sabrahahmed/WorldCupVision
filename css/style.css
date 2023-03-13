@@ -6,6 +6,34 @@
     box-sizing: border-box;
 }
 
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-300%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    100% {
+      transform: translateY(0);
+    }
+    0% {
+      transform: translateY(-500%);
+    }
+}
+
+@keyframes slideInFromBottom {
+    100% {
+      transform: translateY(0);
+    }
+    0% {
+      transform: translateY(500%);
+    }
+}
+
+
 html{
     background-image: url("../images/background.jpg");  
     background-position: center center;  
@@ -47,6 +75,8 @@ nav{
     align-items: center;
     flex-wrap: wrap;
     /* background-color: black; */
+    animation: 2s ease-out 0s 1 slideInFromTop;
+
 }
 nav img{
     width: 200px;
@@ -88,6 +118,7 @@ nav ul div:hover{
     margin-bottom: 20px;
     height: 50vh;
     width: 350px;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 .search{
@@ -131,6 +162,8 @@ nav ul div:hover{
     display: flex;
     flex-direction: column;
     gap: 15px;
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+
 }
 
 .result-container h1{
@@ -198,6 +231,7 @@ nav ul div:hover{
     display: flex;
     flex-direction: column;
     gap: 15px;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 .teams-container h1{
@@ -258,6 +292,7 @@ h4{
     display: flex;
     flex-direction: column;
     gap: 15px;
+    animation: 1s ease-out 0s 1 slideInFromLeft;    
 }
 
 #bracket{
@@ -284,6 +319,8 @@ h4{
     font-size: 30px;
     color: white;
     cursor: pointer;
+    animation: 1s ease-out 0s 1 slideInFromLeft;    
+
 }
 
 .col{
