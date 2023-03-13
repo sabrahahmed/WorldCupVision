@@ -7,7 +7,7 @@
       const teamsHTML = data.map(({ team }) => {
         return `
           <li>
-            <img onclick="transitionToPage('result.html')" class="grid-flag" id="${team}" src="images/flags/${team}.jpg" alt="">
+            <img onclick="transitionToPage('result.html')" class="grid-flag" id="${team}" src="images/Flags/${team}.jpg" alt="">
             <h4>${team}</h4>
           </li>
         `;
