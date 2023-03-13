@@ -25,6 +25,12 @@ function autoClick() {
   saveButton.click();
 }
 
+R16teams.forEach((team) => {
+    team.addEventListener("dblclick", ()=>{
+        fetchTeam(team.innerHTML)
+    });
+})
+
 // Save bracket once save button is clicked 
 saveButton.addEventListener('click', ()=>{
     let flag = true
@@ -57,50 +63,3 @@ saveButton.addEventListener('click', ()=>{
         })
     }
 })
-
-R16teams.forEach((team) => {
-    team.addEventListener("dblclick", ()=>{
-        fetchTeam(team.innerHTML)
-    });
-})
-
-// FETCH TEAMS DATA FROM JSON
-function fetchTeam(searchQuery) {
-    return fetch('teams.json')
-    .then(response => response.json())
-    .then(data => {
-        const team = data.find(t => t.team === searchQuery);
-        if (team) {
-            const myObjectString = JSON.stringify(team);
-            localStorage.setItem('team', myObjectString);
-            
-            setTimeout(() => location.href = resultURL, 500);
-            
-        } else {
-            alert(`Team ${searchQuery} not found.`);
-        }
-    })
-    .catch(error => {
-        console.error(`Error fetching teams: ${error}`);
-    });
-}
-
-// UPDATE TEAM INFO ON RESULTS PAGE
-function updateResultPage() {
-    const teamInfo = JSON.parse(localStorage.getItem('team'));
-    const { team, ranking, dateQualified, qualificationMethod, lastQualification, previousTitles } = teamInfo;
-
-    const imgEl = document.querySelector(".result-container img");
-    imgEl.setAttribute("src", `images/flags/${team}.jpg`);
-        
-    document.getElementById("country").innerHTML = team;
-    document.getElementById("rank").innerHTML = `World Ranking: ${ranking}`;
-    document.getElementById("dateQualified").innerHTML = dateQualified;
-    document.getElementById("qualificationMethod").innerHTML = qualificationMethod;
-    document.getElementById("lastQualification").innerHTML = lastQualification;
-    document.getElementById("previousTitles").innerHTML = previousTitles;
-}
-
-if (location.pathname === "/result.html") {
-    updateResultPage();
-}

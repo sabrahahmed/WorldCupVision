@@ -5,8 +5,11 @@ const resultURL = "result.html";
 // CALL fetchTeam() FUNCTION ON CLICK
 function onDOMContentLoaded() {
     searchButtonEl.addEventListener("click", () => {
-        let input = searchInputEl.value.trim()
-        fetchTeam(input.charAt(0).toUpperCase() + input.slice(1));
+        
+        if(searchInputEl.value) {
+            let input = searchInputEl.value.trim()
+            fetchTeam(input.charAt(0).toUpperCase() + input.slice(1));
+        }
     });
 }
 
@@ -43,81 +46,5 @@ async function fetchTeam(searchQuery) {
       console.error(`Error fetching teams: ${error}`);
     }
 }
-// function fetchTeam(searchQuery) {
-//     return fetch('teams.json')
-//     .then(response => response.json())
-//     .then(data => {
-//         const team = data.find(t => t.team === searchQuery);
-//         if (team) {
-//             const myObjectString = JSON.stringify(team);
-//             localStorage.setItem('team', myObjectString);
-//             setTimeout(() => location.href = resultURL, 500);
-            
-//         } else {
-//             alert(`Team ${searchQuery} not found.`);
-//         }
-//     })
-//     .catch(error => {
-//         console.error(`Error fetching teams: ${error}`);
-//     });
-// }
 
-// UPDATE TEAM INFO ON RESULTS PAGE
-function updateResultPage() {
-    const teamInfo = JSON.parse(localStorage.getItem('team'));
-    const { team, ranking, dateQualified, qualificationMethod, lastQualification, previousTitles } = teamInfo;
-
-    const imgEl = document.querySelector(".result-container img");
-    imgEl.setAttribute("src", `images/flags/${team}.jpg`);
-        
-    document.getElementById("country").innerHTML = team;
-    document.getElementById("rank").innerHTML = `World Ranking: ${ranking}`;
-    document.getElementById("dateQualified").innerHTML = dateQualified;
-    document.getElementById("qualificationMethod").innerHTML = qualificationMethod;
-    document.getElementById("lastQualification").innerHTML = lastQualification;
-    document.getElementById("previousTitles").innerHTML = previousTitles;
-}
-
-if (location.pathname === "/result.html") {
-    updateResultPage();
-}
-
-// FETCH TEAM NAMES FROM JSON FOR TEAMS LIST PAGE
-async function createTeamGrid() {
-    try {
-        const response = await fetch('teams.json');
-        const data = await response.json();
-        const teamsGridEl = document.querySelector(".teams-grid");
-        data.forEach(({team}) => {
-            teamsGridEl.innerHTML += `<li><img onclick="transitionToPage('result.html')" class="grid-flag" id="${team}" src="images/Flags/${team}.jpg" alt=""><h4>${team}</h4></li>`       
-        });
-    } catch (error) {
-        console.error(`Error fetching teams: ${error}`);
-    }
-}
-
-// function createTeamGrid() {
-//     return fetch('teams.json')
-//     .then(response => response.json())
-//     .then(data => {
-//         const teamsGridEl = document.querySelector(".teams-grid");
-//         data.forEach(({team}) => {
-//             teamsGridEl.innerHTML += `<li><img onclick="transitionToPage('result.html')" class="grid-flag" id="${team}" src="Images/Flags/${team}.jpg" alt=""><h4>${team}</h4></li>`       
-//         });
-//     })
-//     .catch(error => {
-//         console.error(`Error fetching teams: ${error}`);
-//     });
-// }
-
-if (location.pathname === "/teams.html") {
-    createTeamGrid().then(() => {
-        const gridFlags = document.querySelectorAll(".grid-flag");
-        gridFlags.forEach((flag) => {
-            flag.addEventListener("click", () => {
-                fetchTeam(flag.getAttribute("id"));   
-            });
-          });
-    });
-}
 
