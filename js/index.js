@@ -78,7 +78,7 @@ function updateResultPage() {
     document.getElementById("previousTitles").innerHTML = previousTitles;
 }
 
-if (location.pathname === "/result.html") {
+if (location.pathname === "result.html") {
     updateResultPage();
 }
 
@@ -110,7 +110,7 @@ async function createTeamGrid() {
 //     });
 // }
 
-if (location.pathname === "/teams.html") {
+if (location.pathname === "teams.html") {
     createTeamGrid().then(() => {
         const gridFlags = document.querySelectorAll(".grid-flag");
         gridFlags.forEach((flag) => {
