@@ -11,10 +11,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="#">
     <title>Predictor</title>
 </head>
-<script src="js/index.js"></script>
-<script src="js/predictor.js"></script>
 <body onload="autoClick();">
     <audio autoplay id="audio" loop="true">
         <source src="audio/stadium.mp3">
@@ -32,7 +31,7 @@
     </header>
 
     <main id="bracket-main">
-        <div class="teams-container">
+        <div class="bracket-container">
           <h1>Predict the winner!</h1>
             <div id="bracket">
               <!-- <h2>My World Cup Prediction!</h2> -->
@@ -311,5 +310,7 @@
     <script>
       document.getElementById("audio").volume = 0.1;
     </script>
+    <script src="js/index.js"></script>
+    <script src="js/predictor.js"></script>
 </body>
 </html>

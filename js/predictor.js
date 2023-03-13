@@ -25,27 +25,37 @@ function autoClick() {
   saveButton.click();
 }
 
-
 // Save bracket once save button is clicked 
 saveButton.addEventListener('click', ()=>{
-    const canvas = document.createElement('canvas');
-    // const ctx = canvas.getContext('2d', {willReadFrequently: true});
-    
-    //Set bracket image background color
-    bracket.style.backgroundColor = "rgba(4, 92, 124, 0.724)"
-    
-    html2canvas(bracket, {
-        onrendered: (canvas) => {
-    
-        var imageData = canvas.toDataURL("trophy/jpg");
-        var newData = imageData.replace(/^data:image\/jpg/, "data: application/octet-stream");
-        
-        saveButton.setAttribute("href", newData);
-        saveButton.setAttribute("download", "bracket.jpg")
-        bracket.style.background = "";
-    
-        }
+    let flag = true
+    teamInput.forEach(team => {
+        if(team.innerHTML === ''){
+            flag = false
+            console.log("empty flag")
+        };
+        flag = true;
     })
+    
+    if (flag) {
+        const canvas = document.createElement('canvas');
+        // const ctx = canvas.getContext('2d', {willReadFrequently: true});
+        
+        //Set bracket image background color
+        bracket.style.backgroundColor = "rgba(4, 92, 124, 0.724)"
+        
+        html2canvas(bracket, {
+            onrendered: (canvas) => {
+        
+            var imageData = canvas.toDataURL("trophy/jpg");
+            var newData = imageData.replace(/^data:image\/jpg/, "data: application/octet-stream");
+            
+            saveButton.setAttribute("href", newData);
+            saveButton.setAttribute("download", "bracket.jpg")
+            bracket.style.background = "";
+        
+            }
+        })
+    }
 })
 
 R16teams.forEach((team) => {

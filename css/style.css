@@ -186,6 +186,7 @@ nav ul div:hover{
 
 /* TEAMS GRID PAGE */
 .teams-container {
+    margin-top: -10em;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -196,8 +197,7 @@ nav ul div:hover{
 
 .teams-container h1{
     font-size: 50px;
-    margin-top: -170px;
-    margin-bottom: 50px;
+    margin-bottom: 1em;
     color: black;
 }
 
@@ -244,10 +244,19 @@ h4{
 
 /* BRACKET PREDICTOR */
 
+.bracket-container{
+    margin-top: -10em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 #bracket{
     height: 700px;
     width: 80vw;
-    overflow: hidden;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr 1fr;
@@ -255,12 +264,18 @@ h4{
     align-items: center;
     justify-content: center;
     padding-top: 5px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 1500px; 
 }
 
 #bracket-main h1{
-    margin-top: -30px;
-    margin-bottom: -10px;
+    margin-top: 100px;
+    margin-bottom: 20px;
     font-size: 50px;
+    color: black;
 }
 
 .export-btn{
@@ -297,7 +312,7 @@ h4{
 .teamSelect{
     font-size: 15px;
     width: 80%;
-    height: 30px;
+    max-height: 30px;
     padding: 3px;
     text-align: center;
     border: 0;
@@ -450,10 +465,13 @@ nav .fa-solid{
 }
 
 @media only screen and (max-width: 1055px){
+    .teams-container{
+        margin-top: 200px;
+    }
     .teams-grid{
-        width: 100vw;
+        max-width: 100vw;
         color: black;
-        overflow: hidden;
+        /* overflow: hidden; */
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(8, 1fr);
@@ -463,30 +481,50 @@ nav .fa-solid{
         list-style: none;
         margin-bottom: -100px;
     }
+    .bracket-container{
+        margin-top: 200px;
+        width: 350px; /* Set a fixed width */
+        height: 100;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        display: inline-block;
+    }   
+
+    #bracket{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
 }
 
 @media only screen and (max-width: 530px){
-        
+    .teams-container{
+        margin-top: 1400px;
+    }
     .teams-grid{
-        width: 100vw;
-        color: black;
-        overflow: hidden;
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(16, 1fr);
-        gap: 15px;
-        align-items: center;
-        justify-content: center;
-        list-style: none;
-        margin-bottom: -100px;
-        margin-top: 1000px;
+    }
+    
+    .result-container{
+        margin-bottom: 100px;
     }
 
-    /* .grid-flag {
-    width: 200px;
-    height: 165px;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-    } */
+    .result-container h1{
+        margin-top: 300px;
+    }
+    
+    .result-container img{
+        max-width: 350px;
+    }
+    
+    #table{
+        width: 99vw;
+        padding: 20px;
+    }
+
+
 }
 
