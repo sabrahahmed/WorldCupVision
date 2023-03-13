@@ -16,9 +16,7 @@ async function createTeamGrid() {
     } catch (error) {
       console.error(`Error fetching teams: ${error}`);
     }
-  }
-  
-
+}
 
 if (location.pathname === "/teams.html") {
     createTeamGrid().then(() => {
