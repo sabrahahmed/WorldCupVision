@@ -18,7 +18,7 @@ Users can also easily navigate to the Bracket Predictor and select which teams t
 To use this application, simply navigate to the website at https://sabrahahmed.github.io/FIFA-World-Cup-2022/ and try out all the app features! 
 
 <h2> Technology Used </h2>
-This web application was built using HTML, CSS, and JavaScript. The information about the qualified teams was sourced from the official FIFA World Cup websites.
+This web application was built using HTML, CSS, and JavaScript. The information about the qualified teams was sourced from the official FIFA World Cup website.
 
 
 
