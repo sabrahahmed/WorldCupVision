@@ -89,7 +89,7 @@ async function createTeamGrid() {
         const data = await response.json();
         const teamsGridEl = document.querySelector(".teams-grid");
         data.forEach(({team}) => {
-            teamsGridEl.innerHTML += `<li><img onclick="transitionToPage('result.html')" class="grid-flag" id="${team}" src="Images/Flags/${team}.jpg" alt=""><h4>${team}</h4></li>`       
+            teamsGridEl.innerHTML += `<li><img onclick="transitionToPage('result.html')" class="grid-flag" id="${team}" src="images/Flags/${team}.jpg" alt=""><h4>${team}</h4></li>`       
         });
     } catch (error) {
         console.error(`Error fetching teams: ${error}`);
