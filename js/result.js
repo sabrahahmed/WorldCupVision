@@ -1,5 +1,6 @@
 (function updateResultPage() {
     const teamInfo = JSON.parse(localStorage.getItem('team'));
+    console.log(teamInfo)
     const { team, ranking, dateQualified, qualificationMethod, lastQualification, previousTitles } = teamInfo;
 
     const imgEl = document.querySelector(".result-container img");

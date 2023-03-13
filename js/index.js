@@ -5,11 +5,8 @@ const resultURL = "result.html";
 // CALL fetchTeam() FUNCTION ON CLICK
 function onDOMContentLoaded() {
     searchButtonEl.addEventListener("click", () => {
-        
-        if(searchInputEl.value) {
-            let input = searchInputEl.value.trim()
-            fetchTeam(input.charAt(0).toUpperCase() + input.slice(1));
-        }
+        let input = searchInputEl.value.trim()
+        fetchTeam(input.charAt(0).toUpperCase() + input.slice(1));
     });
 }
 
@@ -46,5 +43,4 @@ async function fetchTeam(searchQuery) {
       console.error(`Error fetching teams: ${error}`);
     }
 }
-
 

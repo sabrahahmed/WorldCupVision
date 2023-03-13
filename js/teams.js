@@ -1,5 +1,5 @@
 // FETCH TEAM NAMES FROM JSON FOR TEAMS LIST PAGE
-(async function createTeamGrid() {
+async function createTeamGrid() {
     try {
       const response = await fetch('teams.json');
       const data = await response.json();
@@ -16,13 +16,17 @@
     } catch (error) {
       console.error(`Error fetching teams: ${error}`);
     }
-})();
+  }
   
 
-const gridFlags = document.querySelectorAll(".grid-flag");
-gridFlags.forEach((flag) => {
-    flag.addEventListener("click", () => {
-        fetchTeam(flag.getAttribute("id"));   
-    });
-});
 
+if (location.pathname === "/teams.html") {
+    createTeamGrid().then(() => {
+        const gridFlags = document.querySelectorAll(".grid-flag");
+        gridFlags.forEach((flag) => {
+            flag.addEventListener("click", () => {
+                fetchTeam(flag.getAttribute("id"));   
+            });
+          });
+    });
+}

@@ -16,7 +16,7 @@ function closemenu(){
 const team = document.querySelectorAll(".team");
 team.forEach((team) => {
   team.addEventListener('change', function(){
-    team.children[0].setAttribute("src", `images/flags/${team.children[1].value}.jpg`);
+    team.children[0].setAttribute("src", `images/Flags/${team.children[1].value}.jpg`);
   })
 })
 
