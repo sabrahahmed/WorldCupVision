@@ -1,7 +1,7 @@
 <h1> Fifa World Cup 2022 </h1>
 
 <h2> Description </h2>
-This web application allows users to search information about the qualified teams in the 2022 FIFA World Cup and make their own bracket predictions! Users can easily search for their favorite team and get information about their qualification date, qualification method, last qualification, and previous titles. 
+This web application allows users to search information about the qualified teams in the 2022 FIFA World Cup and make their own bracket predictions! Users can easily search for their favorite team and get information about their qualification date, qualification method, last qualification, and previous titles. The application is designed to be user-friendly, with an intuitive and appealing interface.
 <br/>
 <br/>
 <p align="center">
@@ -9,7 +9,7 @@ This web application allows users to search information about the qualified team
 </p>
 <br/>
 <br/>
-Users can also easily navigate to the Bracket Predictor and select which teams they think will advance to the next rounds of the tournament. Once the user has made their predictions, they can save their bracket as an image to their device and share it with friends or on social media. The application is designed to be user-friendly, with an intuitive interface and straightforward instructions.
+Users can also easily navigate to the Bracket Predictor and select which teams they think will advance to the next rounds of the tournament. Once the user has made their predictions, they can save their bracket as an image to their device and share it with friends or on social media. 
 
 <br/>
 <br/>
