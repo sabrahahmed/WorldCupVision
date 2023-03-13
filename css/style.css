@@ -162,7 +162,7 @@ nav ul div:hover{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    animation: 1s ease-out 0s 1 slideInFromBottom;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 
 }
 
