@@ -5,13 +5,14 @@ const resultURL = "result.html";
 // CALL fetchTeam() FUNCTION ON CLICK
 function onDOMContentLoaded() {
     searchButtonEl.addEventListener("click", () => {
-        fetchTeam(searchInputEl.value.trim());
+        let input = searchInputEl.value.trim()
+        fetchTeam(input.charAt(0).toUpperCase() + input.slice(1));
     });
 }
 
 document.addEventListener("DOMContentLoaded", onDOMContentLoaded);
 
-// SMOOTH TRANSITION
+// SMOOTH TRANSITION BETWEEN PAGES
 function transitionToPage(href) {
     document.querySelector('body').style.opacity = 0;
     setTimeout(() => { 
@@ -22,27 +23,44 @@ function transitionToPage(href) {
 function onDOMContentLoaded2() {
     document.querySelector('body').style.opacity = 1;
 }
+
 document.addEventListener('DOMContentLoaded', onDOMContentLoaded2);
 
 // FETCH TEAMS DATA FROM JSON
-function fetchTeam(searchQuery) {
-    return fetch('teams.json')
-    .then(response => response.json())
-    .then(data => {
-        const team = data.find(t => t.team === searchQuery);
-        if (team) {
-            const myObjectString = JSON.stringify(team);
-            localStorage.setItem('team', myObjectString);
-            setTimeout(() => location.href = resultURL, 500);
-            
-        } else {
-            alert(`Team ${searchQuery} not found.`);
-        }
-    })
-    .catch(error => {
-        console.error(`Error fetching teams: ${error}`);
-    });
+async function fetchTeam(searchQuery) {
+    try {
+      const response = await fetch('teams.json');
+      const data = await response.json();
+      const team = data.find(t => t.team === searchQuery);
+      if (team) {
+        const myObjectString = JSON.stringify(team);
+        localStorage.setItem('team', myObjectString);
+        setTimeout(() => location.href = resultURL, 500);
+      } else {
+        alert(`Team ${searchQuery} not found.`);
+      }
+    } catch (error) {
+      console.error(`Error fetching teams: ${error}`);
+    }
 }
+// function fetchTeam(searchQuery) {
+//     return fetch('teams.json')
+//     .then(response => response.json())
+//     .then(data => {
+//         const team = data.find(t => t.team === searchQuery);
+//         if (team) {
+//             const myObjectString = JSON.stringify(team);
+//             localStorage.setItem('team', myObjectString);
+//             setTimeout(() => location.href = resultURL, 500);
+            
+//         } else {
+//             alert(`Team ${searchQuery} not found.`);
+//         }
+//     })
+//     .catch(error => {
+//         console.error(`Error fetching teams: ${error}`);
+//     });
+// }
 
 // UPDATE TEAM INFO ON RESULTS PAGE
 function updateResultPage() {
@@ -65,19 +83,32 @@ if (location.pathname === "/result.html") {
 }
 
 // FETCH TEAM NAMES FROM JSON FOR TEAMS LIST PAGE
-function createTeamGrid() {
-    return fetch('teams.json')
-    .then(response => response.json())
-    .then(data => {
+async function createTeamGrid() {
+    try {
+        const response = await fetch('teams.json');
+        const data = await response.json();
         const teamsGridEl = document.querySelector(".teams-grid");
         data.forEach(({team}) => {
             teamsGridEl.innerHTML += `<li><img onclick="transitionToPage('result.html')" class="grid-flag" id="${team}" src="Images/Flags/${team}.jpg" alt=""><h4>${team}</h4></li>`       
         });
-    })
-    .catch(error => {
+    } catch (error) {
         console.error(`Error fetching teams: ${error}`);
-    });
+    }
 }
+
+// function createTeamGrid() {
+//     return fetch('teams.json')
+//     .then(response => response.json())
+//     .then(data => {
+//         const teamsGridEl = document.querySelector(".teams-grid");
+//         data.forEach(({team}) => {
+//             teamsGridEl.innerHTML += `<li><img onclick="transitionToPage('result.html')" class="grid-flag" id="${team}" src="Images/Flags/${team}.jpg" alt=""><h4>${team}</h4></li>`       
+//         });
+//     })
+//     .catch(error => {
+//         console.error(`Error fetching teams: ${error}`);
+//     });
+// }
 
 if (location.pathname === "/teams.html") {
     createTeamGrid().then(() => {

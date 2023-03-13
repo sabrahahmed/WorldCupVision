@@ -20,6 +20,7 @@
       </audio>
     <header>
         <nav>
+          <img src="images/nav.png" alt="">
           <ul id="nav">
                 <div onclick="transitionToPage('index.html')">Home</div>
                 <div onclick="transitionToPage('teams.html')">List of Teams</div>
@@ -33,8 +34,8 @@
     <main id="bracket-main">
         <div class="bracket-container">
           <h1>Predict the winner!</h1>
+          <div class="bracket-scrollable">
             <div id="bracket">
-              <!-- <h2>My World Cup Prediction!</h2> -->
               <div class="col round-16">
                 <h3>Round of 16</h3>
                 <div class="pair">
@@ -303,7 +304,10 @@
                   </div>
                 </div>
               </div>
-            </div>
+          </div>
+          </div>
+
+          
             <a  target="_blank" id="save" class="export-btn">
               Save Bracket <i class="fa-solid fa-download"></i></a>  
     </main>
