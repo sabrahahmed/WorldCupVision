@@ -16,7 +16,7 @@ function closemenu(){
 const team = document.querySelectorAll(".team");
 team.forEach((team) => {
   team.addEventListener('change', function(){
-    team.children[0].setAttribute("src", `Images/Flags/${team.children[1].value}.jpg`);
+    team.children[0].setAttribute("src", `images/flags/${team.children[1].value}.jpg`);
   })
 })
 
@@ -91,7 +91,7 @@ function updateResultPage() {
     const { team, ranking, dateQualified, qualificationMethod, lastQualification, previousTitles } = teamInfo;
 
     const imgEl = document.querySelector(".result-container img");
-    imgEl.setAttribute("src", `Images/Flags/${team}.jpg`);
+    imgEl.setAttribute("src", `images/flags/${team}.jpg`);
         
     document.getElementById("country").innerHTML = team;
     document.getElementById("rank").innerHTML = `World Ranking: ${ranking}`;
