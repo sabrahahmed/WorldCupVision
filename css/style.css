@@ -412,6 +412,9 @@ select{
     display: flex;
     flex-direction: column;
     gap: 75px;
+    background-image: url("../images/fireworks.gif");  
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 #trophy{
