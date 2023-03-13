@@ -7,10 +7,8 @@ This web application allows users to search information about the qualified team
 <p align="center">
   <img src="https://user-images.githubusercontent.com/108163033/224835214-c24dcfe4-396b-47df-bd92-28e9a6baf114.png" width="700"/>
 </p>
-<br/>
-<br/>
 Users can also easily navigate to the Bracket Predictor and select which teams they think will advance to the next rounds of the tournament. Once the user has made their predictions, they can save their bracket as an image to their device and share it with friends or on social media. 
-
+<br/>
 <br/>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/108163033/224836216-0ee6a2dc-bb76-4ba8-8757-c091ff7e87ee.png" width="700"/>
