@@ -18,13 +18,11 @@ async function createTeamGrid() {
     }
 }
 
-if (location.pathname === "/teams.html") {
-    createTeamGrid().then(() => {
-        const gridFlags = document.querySelectorAll(".grid-flag");
-        gridFlags.forEach((flag) => {
-            flag.addEventListener("click", () => {
-                fetchTeam(flag.getAttribute("id"));   
-            });
-          });
-    });
-}
+createTeamGrid().then(() => {
+    const gridFlags = document.querySelectorAll(".grid-flag");
+    gridFlags.forEach((flag) => {
+        flag.addEventListener("click", () => {
+            fetchTeam(flag.getAttribute("id"));   
+        });
+      });
+});
